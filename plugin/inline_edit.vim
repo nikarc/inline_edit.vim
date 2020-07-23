@@ -101,6 +101,12 @@ call add(g:inline_edit_patterns, {
       \ 'start':         '^\s*:css\>',
       \ 'indent_based':  1,
       \ })
+call add(g:inline_edit_patterns, {
+      \ 'main_filetype':    'liquid',
+      \ 'sub_filetype':     'json',
+      \ 'start':            '{% schema %}',
+      \ 'end':              '{% endschema %}',
+      \ })
 
 command! -range=0 -nargs=* -complete=filetype
       \ InlineEdit call s:InlineEdit(<count>, <q-args>)
